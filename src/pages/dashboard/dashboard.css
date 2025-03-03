@@ -1,0 +1,917 @@
+body {
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-content {
+  padding: 20px;
+  color: white;
+}
+
+.background-section {
+  background-image: url('${process.env.PUBLIC_URL}/background.jpg');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .background-section {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-section {
+    padding: 20px;
+    min-height: 200px;
+  }
+}
+
+.login-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+.message-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  text-align: center;
+}
+
+.message-box p {
+  margin: 0;
+}
+
+.close-btn {
+  width: 100%;
+  padding: 10px;
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #0056b3;
+}
+
+.circle-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px; 
+}
+
+
+/* Home Button */
+.circle-button-home {
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 250px;
+  max-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(-293px, -442px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-home:hover {
+  transform: translate(-293px, -442px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-home {
+    width: 100%;
+    height: 100%;
+    max-width: 220px;
+    max-height: 220px;
+    transform: translate(-143px, -160px);
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+  .circle-button-home {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(-100px, -200px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-home {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, 250px);
+  }
+}
+
+/* Lock Button */
+.circle-button-lock {
+    background-color: #282c34;
+    border: none;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: absolute;
+    transform: translate(140px, -427px);
+    transform-origin: center;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.circle-button-lock:hover {
+  transform: translate(140px, -427px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-lock {
+    width: 100%;
+    height: 100%;
+    max-width: 180px;
+    max-height: 180px;
+    transform: translate(202px, -188px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-lock {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(202px, -370px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-lock {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+/* Shopping Cart Button */
+.circle-button-shopping-cart {
+  background-color: #282c34;
+  border: none;
+  border-radius: 50%;
+  width: 15vw;
+  height: 15vw;
+  max-width: 120px;
+  max-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(-90px, -405px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-shopping-cart:hover {
+  transform: translate(-90px, -405px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-shopping-cart {
+    width: 100%;
+    height: 100%;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(-25px, -220px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-shopping-cart {
+    width: 100%;
+    height: 100%;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(150px, -280px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-shopping-cart {
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+/* Game Button */
+.circle-button-game {
+  background-color: #282c34;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 135px;
+  max-height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(30px, -415px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-game:hover {
+  transform: translate(30px, -415px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-game {
+    width: 100%;
+    height: 100%;
+    max-width: 135px;
+    max-height: 135px;
+    transform: translate(83px, -268px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-game {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(150px, -208px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-game {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+
+/* Head Button */
+.circle-button-head {
+  background-color: #282c34;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 160px;
+  max-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(270px, -289px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-head:hover {
+  transform: translate(270px, -289px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-head {
+    width: 100%;
+    height: 100%;
+    max-width: 140px;
+    max-height: 140px;
+    transform: translate(295px, -188px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-head {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(30px, -250px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-head {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+/* Dollar Button */
+.circle-button-dollar {
+  background-color: #282c34;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 170px;
+  max-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(392px, -163px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-dollar:hover {
+  transform: translate(392px, -163px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-dollar {
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+    max-height: 150px;
+    transform: translate(405px, -121px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-dollar {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(30px, -400px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-dollar {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+/* Check Button */
+.circle-button-check {
+  background-color: #282c34;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 175px;
+  max-height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(278px, -38px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-check:hover {
+  transform: translate(278px, -38px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-check {
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+    max-height: 150px;
+    transform: translate(312px, -53px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-check {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(90px, -100px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-check {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+/* Help Button */
+.circle-button-help {
+  background-color: #282c34;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 180px;
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(180px, 107px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-help:hover {
+  transform: translate(180px, 107px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-help {
+    width: 100%;
+    height: 100%;
+    max-width: 165px;
+    max-height: 165px;
+    transform: translate(230px, 30px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-help {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(150px, -250px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-help {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+/* File Button */
+.circle-button-file {
+  background-color: #282c34;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 180px;
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(-240px, 200px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-file:hover {
+  transform: translate(-240px, 200px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-file {
+    width: 100%;
+    height: 100%;
+    max-width: 160px;
+    max-height: 160px;
+    transform: translate(-128px, 68px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-file {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(-35px, -180px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-file {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+/* Map Button */
+.circle-button-map {
+  background-color: #282c34;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 210px;
+  max-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(-368px, 84px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-map:hover {
+  transform: translate(-368px, 84px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-map {
+    width: 100%;
+    height: 100%;
+    max-width: 190px;
+    max-height: 190px;
+    transform: translate(-224px, -75px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-map {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(30px, -332px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-map {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+/* Rewards Button */
+.circle-button-rewards {
+  background-color: #282c34;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 280px;
+  max-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(-467px, -93px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-rewards:hover {
+  transform: translate(-467px, -93px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-rewards {
+    width: 100vw;
+    height: 100vw;
+    max-width: 250px;
+    max-height: 250px;
+    transform: translate(-358px, -381px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-rewards {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(-100px, -375px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-rewards {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+/* Learn Button */
+.circle-button-learn {
+  background-color: #282c34;
+  border: none;
+  border-radius: 50%;
+  width: 15vw;
+  height: 15vw;
+  max-width: 240px;
+  max-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(-542px, -214px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-learn:hover {
+  transform: translate(-542px, -214px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-learn {
+    width: 100vw;
+    height: 100vw;
+    max-width: 210px;
+    max-height: 210px;
+    transform: translate(-279px, -287px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-learn {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(-100px, -530px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-learn {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+/* Login */
+.circle-button-login {
+  background-color: #282c34;
+  border: none;
+  border-radius: 50%;
+  width: 100vw;
+  height: 100vw;
+  max-width: 320px;
+  max-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  transform: translate(-453px, -370px);
+  transform-origin: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.circle-button-login:hover {
+  transform: translate(-453px, -370px) scale(1.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .circle-button-login {
+    width: 100vw;
+    height: 100vw;
+    max-width: 280px;
+    max-height: 280px;
+    transform: translate(-247px, -580px);
+  }
+}
+
+/* Mobile Landscape*/
+@media (max-width: 768px) {
+  .circle-button-login {
+    width: 20vw;
+    height: 20vw;
+    max-width: 120px;
+    max-height: 120px;
+    transform: translate(30px, -220px);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-login {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(-142px, -350px);
+  }
+}
+
+.circle-button-home img,
+.circle-button-lock img,
+.circle-button-shopping-cart img,
+.circle-button-game img,
+.circle-button-head img,
+.circle-button-dollar img,
+.circle-button-check img,
+.circle-button-help img,
+.circle-button-file img,
+.circle-button-map,
+.circle-button-learn,
+.circle-button-rewards,
+.circle-button-login {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+}
+
+.circle-icon {
+  width: 60%;
+  height: auto;
+}

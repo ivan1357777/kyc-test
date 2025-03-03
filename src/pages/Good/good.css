@@ -1,0 +1,209 @@
+.good-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/b5.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 20px;
+  position: relative;
+  overflow: auto;
+}
+
+.good-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  max-width: 100%;
+  width: 70% !important;
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  font-size: x-large;
+}
+
+/* For small screens (Mobile) */
+@media screen and (max-width: 768px) {
+  .good-page {
+      height: calc(var(--vh, 1vh) * 100);
+  }
+
+  .good-container {
+      width: 90%;
+      padding: 15px;
+      font-size: 14px;
+  }
+
+  .upload-file {
+      width: 100%;
+      font-size: 14px;
+      padding: 8px;
+  }
+}
+
+/* For very small screens (Extra small mobile devices like phones in portrait) */
+@media screen and (max-width: 480px) {
+  .good-container {
+      width: 95%;
+      padding: 10px;
+      font-size: 12px;
+  }
+
+  .upload-file {
+      font-size: 12px;
+      padding: 6px;
+  }
+}
+
+/* For larger screens (Tablet or above) */
+@media screen and (min-width: 1024px) {
+  .good-container {
+      width: 30%;
+      padding: 25px;
+      font-size: x-large;
+  }
+}
+
+.upload-file {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 1.5rem;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #666;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  background: #f1f1f1;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Image styling for uploaded file */
+.uploaded-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Close button styling (No changes to position) */
+.close-btn {
+  position: relative;
+  top: 10px;
+  left: 45%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ffeb3b;
+  transform: scale(1.5);
+  background-color: transparent;
+}
+
+.fullscreen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.fullscreen-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Approved Images Page Styles (Added as requested) */
+.approved-images-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button:hover {
+  background-color: #ddd;
+}
+
+.pagination button.active {
+  background-color: #ffeb3b;
+  font-weight: bold;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 20px 0;
+  justify-items: center;
+}
+
+.thumbnail {
+  width: 200px !important;
+  height: 150px !important;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Center each image horizontally within the container */
+.pending-image-item img,
+.image-item img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}

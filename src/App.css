@@ -1,0 +1,3154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Ultra HD 4K Screens (Landscape) */
+@media (min-width: 3840px) and (orientation: landscape) {
+  body {
+    background-image: url('/background-4k-landscape.jpg');
+  }
+}
+
+/* Ultra HD 4K Screens (Portrait) */
+@media (min-width: 2160px) and (orientation: portrait) {
+  body {
+    background-image: url('/background-4k-portrait.jpg');
+  }
+}
+
+/* Large Desktops (2560px - 3839px) Landscape */
+@media (min-width: 2560px) and (max-width: 3839px) and (orientation: landscape) {
+  body {
+    background-image: url('/background-large-landscape.jpg');
+  }
+}
+
+/* Large Desktops (1440px - 2159px) Portrait */
+@media (min-width: 1440px) and (max-width: 2159px) and (orientation: portrait) {
+  body {
+    background-image: url('/background-large-portrait.jpg');
+  }
+}
+
+/* Desktops (1920px - 2559px) Landscape */
+@media (min-width: 1920px) and (max-width: 2559px) and (orientation: landscape) {
+  body {
+    background-image: url('/background-desktop-landscape.jpg');
+  }
+}
+
+/* Desktops (1080px - 1439px) Portrait */
+@media (min-width: 1080px) and (max-width: 1439px) and (orientation: portrait) {
+  body {
+    background-image: url('/background-desktop-portrait.jpg');
+  }
+}
+
+/* Large Tablets (Landscape) */
+@media (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
+  body {
+    background-image: url('/background-tablet-large-landscape.jpg');
+  }
+}
+
+/* Large Tablets (Portrait) */
+@media (min-width: 800px) and (max-width: 1023px) and (orientation: portrait) {
+  body {
+    background-image: url('/background-tablet-portrait.jpg');
+  }
+}
+
+/* Medium Tablets (Landscape) */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  body {
+    background-image: url('/background-tablet-medium-landscape.jpg');
+  }
+}
+
+/* Medium Tablets (Portrait) */
+@media (min-width: 600px) and (max-width: 799px) and (orientation: portrait) {
+  body {
+    background-image: url('/background-tablet-portrait.jpg');
+  }
+}
+
+/* Small Tablets (Landscape) */
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+  body {
+    background-image: url('/background-tablet-small-landscape.jpg');
+  }
+}
+
+/* Small Tablets (Portrait) */
+@media (min-width: 480px) and (max-width: 599px) and (orientation: portrait) {
+  body {
+    background-image: url('/background-tablet-small-portrait.jpg');
+  }
+}
+
+/* Large Mobile Devices (Landscape) */
+@media (min-width: 480px) and (max-width: 599px) and (orientation: landscape) {
+  body {
+    background-image: url('/background-mobile-large-landscape.jpg');
+  }
+}
+
+/* Large Mobile Devices (Portrait) */
+@media (min-width: 320px) and (max-width: 479px) and (orientation: portrait) {
+  body {
+    background-image: url('/background-mobile-large-portrait.jpg');
+  }
+}
+
+/* Small Mobile Devices (Landscape) */
+@media (max-width: 319px) and (orientation: landscape) {
+  body {
+    background-image: url('/background-mobile-small-landscape.jpg');
+  }
+}
+
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 319px) and (orientation: portrait) {
+  body {
+    background-image: url('/background-mobile-small-portrait.jpg');
+  }
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-content {
+  padding: 20px;
+  color: white;
+}
+
+.background-section {
+  background-image: url('${process.env.PUBLIC_URL}/background.jpg');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .background-section {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-section {
+    padding: 20px;
+    min-height: 200px;
+  }
+}
+
+.login-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+.message-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  text-align: center;
+}
+
+.message-box p {
+  margin: 0;
+}
+
+.close-btn {
+  width: 100%;
+  padding: 10px;
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #0056b3;
+}
+
+.circle-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px; 
+}
+
+
+/* Container */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Container for positioning */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #f0f0f0; /* light background for visibility */
+}
+
+/* Home Button */
+.circle-button-home {
+  border: none;
+  border-radius: 50%;
+  width: 15vw;
+  height: 15vw;
+  max-width: 250px;
+  max-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  overflow: hidden;
+  background-color: transparent;
+  /* Default translation values */
+  --tx: -293px;
+  --ty: -442px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+.circle-button-home:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-home {
+    width: 12.5vw;
+    height: 12.5vh;
+    --tx: 118px;
+    --ty: -344px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-home {
+    width: 12.8vw;
+    height: 12.8vh;
+    --tx: 91px;
+    --ty: -287px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-home {
+    height: 15vh;
+    width: 15vw;
+    --tx: 58px;
+    --ty: -253px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-home {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-home {
+    --tx: 7vw;
+    --ty: -40.5vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-home {
+    width: 13vw;
+    height: 13vw;
+    --tx: -15.2vw;
+    --ty: -45vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-home {
+    --tx: 2vw;
+    --ty: -35vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-home {
+    --tx: 0.1vw;
+    --ty: -37.2vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-home {
+    --tx: -5vw;
+    --ty: -30vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-home {
+    height: 15vh;
+    width: 14vw;
+    --tx: -214.5px;
+    --ty: -282px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-home {
+    height: 17.5vh;
+    width: 17.5vw;
+    --tx: -202px;
+    --ty: -287px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-home {
+    --tx: 0vw;
+    --ty: -35vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-home {
+    --tx: -2vw;
+    --ty: -32vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-home {
+    --tx: -6vw;
+    --ty: -28vh;
+  }
+}
+
+/* Portrait Mode Adjustments  */
+@media screen and (orientation: portrait) {
+  .circle-button-home {
+    --tx: -50px;
+    --ty: -150px;
+  }
+  
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-home {
+      height: 12vh !important;
+      width: 8vw !important;
+      --tx: -101.5px !important;
+      --ty: -381px !important;
+    }
+  }
+  
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-home {
+      height: 10vh !important;
+      width: 9vw !important;
+      --tx: -80px !important;
+      --ty: -335px !important;
+    }
+  }
+  
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-home {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+  
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-home {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+  
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-home {
+      height: 10vh !important;
+      width: 10vw !important;
+      --tx: -48px !important;
+      --ty: -231px !important;
+    }
+  }
+}
+
+/* Lock Button */
+.circle-button-lock {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 15vw;
+  height: 15vw;
+  max-width: 200px;
+  max-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform-origin: center;
+  /* Default translation */
+  --tx: 140px;
+  --ty: -427px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+/* Hover: same location + scale */
+.circle-button-lock:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-lock {
+    width: 12.5vw;
+    height: 12.5vh;
+    --tx: 118px;
+    --ty: -344px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-lock {
+    width: 12.8vw;
+    height: 12.8vh;
+    --tx: 91px;
+    --ty: -287px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-lock {
+    height: 15vh;
+    width: 15vw;
+    --tx: 58px;
+    --ty: -253px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-lock {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-lock {
+    --tx: 7vw;
+    --ty: -40.5vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-lock {
+    width: 11vw;
+    height: 11vw;
+    --tx: 7vw;
+    --ty: -44vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-lock {
+    --tx: 2vw;
+    --ty: -35vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-lock {
+    --tx: 0.1vw;
+    --ty: -37.2vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-lock {
+    --tx: -5vw;
+    --ty: -30vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-lock {
+    height: 13vh;
+    width: 12vw;
+    --tx: 88px;
+    --ty: -282px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-lock {
+    --tx: 85px;
+    --ty: -282px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-lock {
+    --tx: 0vw;
+    --ty: -35vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-lock {
+    --tx: -2vw;
+    --ty: -32vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-lock {
+    --tx: -6vw;
+    --ty: -28vh;
+  }
+}
+
+/* Portrait Mode Adjustments  */
+@media screen and (orientation: portrait) {
+  .circle-button-lock {
+    --tx: -50px;
+    --ty: -150px;
+  }
+  
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-lock {
+      height: 12vh !important;
+      width: 8vw !important;
+      --tx: 67px !important;
+      --ty: -381px !important;
+    }
+  }
+  
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-lock {
+      height: 10vh !important;
+      width: 9vw !important;
+      --tx: 46.5px !important;
+      --ty: -335px !important;
+    }
+  }
+  
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-lock {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+  
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-lock {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+  
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-lock {
+      height: 10vh !important;
+      width: 10vw !important;
+      --tx: 27px !important;
+      --ty: -231px !important;
+    }
+  }
+}
+
+/* Shopping Cart Button */
+.circle-button-shopping-cart {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 15vw;
+  height: 15vw;
+  max-width: 120px;
+  max-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform-origin: center;
+  /* Default translation values */
+  --tx: -90px;
+  --ty: -405px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+/* Hover Effect: same location + scale */
+.circle-button-shopping-cart:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-shopping-cart {
+    --tx: -80px;
+    --ty: -363px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-shopping-cart {
+    width: 8vw;
+    height: 8vh;
+    --tx: -68px;
+    --ty: -280px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-shopping-cart {
+    --tx: -50px;
+    --ty: -250px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-shopping-cart {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-shopping-cart {
+    --tx: -5.2vw;
+    --ty: -39.5vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-shopping-cart {
+    width: 7vw;
+    height: 7vw;
+    --tx: -4.8vw;
+    --ty: -42vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-shopping-cart {
+    --tx: -9vw;
+    --ty: -39vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-shopping-cart {
+    --tx: -10vw;
+    --ty: -39vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-shopping-cart {
+    --tx: -8vw;
+    --ty: -35vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-shopping-cart {
+    height: 10vh;
+    width: 8vw;
+    --tx: -70px;
+    --ty: -285px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-shopping-cart {
+    --tx: -60px;
+    --ty: -270px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-shopping-cart {
+    --tx: -9vw;
+    --ty: -39vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-shopping-cart {
+    --tx: -10vw;
+    --ty: -39vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-shopping-cart {
+    --tx: -8vw;
+    --ty: -35vh;
+  }
+}
+
+/* Portrait Mode Adjustments */
+@media screen and (orientation: portrait) {
+  .circle-button-shopping-cart {
+    --tx: -50px;
+    --ty: -150px;
+  }
+  
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-shopping-cart {
+      height: 6.5vh;
+      width: 5vw;
+      --tx: -30px;
+      --ty: -365px;
+    }
+  }
+  
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-shopping-cart {
+      height: 6vh;
+      width: 6.2vw;
+      --tx: -25px !important;
+      --ty: -325px !important;
+    }
+  }
+  
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-shopping-cart {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+  
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-shopping-cart {
+      height: 10vh !important;
+      width: 10vw !important;
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+  
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-shopping-cart {
+      height: 5.5vh !important;
+      width: 7.5vw !important;
+      --tx: -18px !important;
+      --ty: -225px !important;
+    }
+  }
+}
+
+/* Game Button */
+.circle-button-game {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 15vw;
+  height: 15vw;
+  max-width: 135px;
+  max-height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform-origin: center;
+  --tx: 30px;
+  --ty: -415px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+/* Hover Effect: same coordinates + scale */
+.circle-button-game:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-game {
+    --tx: 13px;
+    --ty: -373px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-game {
+    width: 8vw;
+    height: 8vh;
+    --tx: 16px;
+    --ty: -282px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-game {
+    --tx: 5px;
+    --ty: -252px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-game {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-game {
+    --tx: 0.2vw;
+    --ty: -40.8vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-game {
+    width: 8.8vw;
+    height: 8.8vw;
+    --tx: 0.2vw;
+    --ty: -44vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-game {
+    --tx: -7vw;
+    --ty: -32vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-game {
+    --tx: -8vw;
+    --ty: -30vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-game {
+    --tx: -6vw;
+    --ty: -28vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-game {
+    height: 10vh;
+    width: 8vw;
+    --tx: 5px;
+    --ty: -287px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-game {
+    --tx: 20px;
+    --ty: -272px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-game {
+    --tx: -7vw;
+    --ty: -32vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-game {
+    --tx: -8vw;
+    --ty: -30vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-game {
+    --tx: -6vw;
+    --ty: -28vh;
+  }
+}
+
+/* Portrait Mode Adjustments   */
+@media screen and (orientation: portrait) {
+  .circle-button-game {
+    --tx: -50px;
+    --ty: -150px;
+  }
+  
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-game {
+      height: 6.5vh;
+      width: 5vw;
+      --tx: 17px;
+      --ty: -365px;
+    }
+  }
+  
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-game {
+      height: 6vh;
+      width: 6vw;
+      --tx: 10px !important;
+      --ty: -325px !important;
+    }
+  }
+  
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-game {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+  
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-game {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+  
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-game {
+      height: 5.5vh !important;
+      width: 7.5vw !important;
+      --tx: 3px !important;
+      --ty: -225px !important;
+    }
+  }
+}
+
+/* Head Button */
+.circle-button-head {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 16vw;
+  height: 16vw;
+  max-width: 160px;
+  max-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: visible;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  --tx: 270px;
+  --ty: -289px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+/* Hover Effect: same coordinates with scaling */
+.circle-button-head:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-head {
+    max-width: 140px;
+    max-height: 140px;
+    --tx: 233px;
+    --ty: -252px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-head {
+    height: 20vh;
+    width: 20vh;
+    max-width: 110px;
+    max-height: 110px;
+    --tx: 197px;
+    --ty: -207px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-head {
+    width: 9vw;
+    height: 9vw;
+    --tx: 132px;
+    --ty: -180px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-head {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-head {
+    --tx: 14.2vw;
+    --ty: -27vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-head {
+    width: 8vw;
+    height: 8vw;
+    --tx: 14.4vw;
+    --ty: -29.3vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-head {
+    --tx: 10vw;
+    --ty: -28vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-head {
+    --tx: -8vw;
+    --ty: -30vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-head {
+    --tx: -6vw;
+    --ty: -28vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-head {
+    width: 8vw;
+    height: 8vw;
+    --tx: 194px;
+    --ty: -204px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-head {
+    height: 115vh;
+    width: 9vw;
+    --tx: 190px;
+    --ty: -200px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-head {
+    --tx: 10vw;
+    --ty: -28vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-head {
+    --tx: -8vw;
+    --ty: -30vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-head {
+    --tx: -6vw;
+    --ty: -28vh;
+  }
+}
+
+/* Portrait Mode Adjustments */
+@media screen and (orientation: portrait) {
+  .circle-button-head {
+    --tx: -50px;
+    --ty: -150px;
+  }
+
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-head {
+      height: 11vh;
+      width: 6vw;
+      --tx: 121px;
+      --ty: -263px;
+    }
+  }
+
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-head {
+      height: 9vh !important;
+      width: 6vw !important;
+      --tx: 91px !important;
+      --ty: -228px !important;
+    }
+  }
+
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-head {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-head {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-head {
+      height: 9vh !important;
+      width: 7vw !important;
+      --tx: 53px !important;
+      --ty: -158px !important;
+    }
+  }
+}
+
+/* Dollar Button */
+.circle-button-dollar {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 17vw;
+  height: 17vw;
+  max-width: 170px;
+  max-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform-origin: center;
+  --tx: 392px;
+  --ty: -163px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+/* Hover Effect: */
+.circle-button-dollar:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Extra Large Screens (1920px and below) */
+@media (max-width: 1920px) {
+  .circle-button-dollar {
+    --tx: 392px;
+    --ty: -163px;
+  }
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-dollar {
+    max-width: 143px;
+    max-height: 143px;
+    --tx: 343px;
+    --ty: -141px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-dollar {
+    height: 18vh;
+    width: 18vw;
+    max-width: 120px;
+    max-height: 120px;
+    --tx: 285px;
+    --ty: -117px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-dollar {
+    width: 10vw;
+    height: 10vw;
+    --tx: 190px;
+    --ty: -100px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-dollar {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-dollar {
+    --tx: 20.4vw;
+    --ty: -15.5vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-dollar {
+    width: 8.6vw;
+    height: 8.6vw;
+    --tx: 20.6vw;
+    --ty: -16vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-dollar {
+    --tx: 10vw;
+    --ty: -25vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-dollar {
+    --tx: -8vw;
+    --ty: -30vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-dollar {
+    --tx: -6vw;
+    --ty: -28vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-dollar {
+    width: 9vw;
+    height: 9vw;
+    --tx: 278px;
+    --ty: -117px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-dollar {
+    width: 12vw;
+    height: 13vh;
+    --tx: 263px;
+    --ty: -105px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-dollar {
+    --tx: 10vw;
+    --ty: -25vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-dollar {
+    --tx: -8vw;
+    --ty: -30vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-dollar {
+    --tx: -6vw;
+    --ty: -28vh;
+  }
+}
+
+/* Portrait Mode Adjustments */
+@media screen and (orientation: portrait) {
+  .circle-button-dollar {
+    --tx: -50px;
+    --ty: -150px;
+  }
+  
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-dollar {
+      height: 11vh;
+      width: 7.5vw;
+      --tx: 168px;
+      --ty: -145px;
+    }
+  }
+  
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-dollar {
+      height: 10vh;
+      width: 9vw;
+      --tx: 121px !important;
+      --ty: -127px !important;
+    }
+  }
+  
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-dollar {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+  
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-dollar {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+  
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-dollar {
+      height: 10vh !important;
+      width: 11vw !important;
+      --tx: 69px !important;
+      --ty: -87px !important;
+    }
+  }
+}
+
+/* Check Button */
+.circle-button-check {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 18vw;
+  height: 18vw;
+  max-width: 175px;
+  max-height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform-origin: center;
+  --tx: 278px;
+  --ty: -38px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+/* Hover Effect: same coordinates with added scale */
+.circle-button-check:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Extra Large Screens (1920px and below) */
+@media (max-width: 1920px) {
+  .circle-button-check {
+    --tx: 278px;
+    --ty: -38px;
+  }
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-check {
+    max-width: 143px;
+    max-height: 143px;
+    --tx: 247px;
+    --ty: -30px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-check {
+    width: 9.5vw;
+    height: 9.5vw;
+    --tx: 205px;
+    --ty: -25px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-check {
+    width: 10vw;
+    height: 10vw;
+    --tx: 135px;
+    --ty: -16px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-check {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-check {
+    --tx: 14.7vw;
+    --ty: -3.6vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-check {
+    width: 8.6vw;
+    height: 8.6vw;
+    --tx: 14.8vw;
+    --ty: -2.8vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-check {
+    --tx: 8vw;
+    --ty: -20vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-check {
+    --tx: -8vw;
+    --ty: -25vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-check {
+    --tx: -6vw;
+    --ty: -22vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-check {
+    width: 9vw;
+    height: 9vw;
+    --tx: 199px;
+    --ty: -26px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-check {
+    height: 12vh;
+    width: 12vw;
+    --tx: 186px;
+    --ty: -11px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-check {
+    --tx: 8vw;
+    --ty: -20vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-check {
+    --tx: -8vw;
+    --ty: -25vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-check {
+    --tx: -6vw;
+    --ty: -22vh;
+  }
+}
+
+/* Portrait Mode Adjustments */
+@media screen and (orientation: portrait) {
+  .circle-button-check {
+    --tx: -50px;
+    --ty: -150px;
+  }
+  
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-check {
+      height: 12vh !important;
+      width: 8vw !important;
+      --tx: 122px;
+      --ty: -15px;
+    }
+  }
+  
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-check {
+      height: 10vh !important;
+      width: 9vw !important;
+      --tx: 88px !important;
+      --ty: -8px !important;
+    }
+  }
+  
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-check {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+  
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-check {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+  
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-check {
+      height: 10vh !important;
+      width: 11vw !important;
+      --tx: 48.5px !important;
+      --ty: -4px !important;
+    }
+  }
+}
+
+/* Help Button */
+.circle-button-help {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 18vw;
+  height: 18vw;
+  max-width: 180px;
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform-origin: center;
+  --tx: 180px;
+  --ty: 107px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+.circle-button-help:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Extra Large Screens (1920px and below) */
+@media (max-width: 1920px) {
+  .circle-button-help {
+    --tx: 180px;
+    --ty: 107px;
+  }
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-help {
+    --tx: 160.5px;
+    --ty: 98px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-help {
+    width: 10vw;
+    height: 10vw;
+    --tx: 131px;
+    --ty: 79px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-help {
+    width: 11vw;
+    height: 11vw;
+    --tx: 82px;
+    --ty: 77px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-help {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-help {
+    --tx: 9vw;
+    --ty: 9.3vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-help {
+    width: 10vw;
+    height: 10vw;
+    --tx: 9.2vw;
+    --ty: 11.5vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-help {
+    --tx: 6vw;
+    --ty: 5vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-help {
+    --tx: -8vw;
+    --ty: -20vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-help {
+    --tx: -6vw;
+    --ty: -18vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-help {
+    width: 9vw;
+    height: 9vw;
+    --tx: 131.5px;
+    --ty: 80px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-help {
+    height: 12vh;
+    width: 12vw;
+    --tx: 122px;
+    --ty: 92px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-help {
+    --tx: 6vw;
+    --ty: 5vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-help {
+    --tx: -8vw;
+    --ty: -20vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-help {
+    --tx: -6vw;
+    --ty: -18vh;
+  }
+}
+
+/* Portrait Mode Adjustments */
+@media screen and (orientation: portrait) {
+  .circle-button-help {
+    --tx: -50px;
+    --ty: -150px;
+  }
+  
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-help {
+      height: 11vh;
+      width: 8vw;
+      --tx: 81px;
+      --ty: 132px;
+    }
+  }
+  
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-help {
+      --tx: 60px !important;
+      --ty: 115px !important;
+    }
+  }
+  
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-help {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+  
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-help {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+  
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-help {
+      height: 10vh !important;
+      width: 10vw !important;
+      --tx: 32.5px !important;
+      --ty: 85px !important;
+    }
+  }
+}
+
+/* File Button */
+.circle-button-file {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 18vw;
+  height: 18vw;
+  max-width: 180px;
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform-origin: center;
+  --tx: -240px;
+  --ty: 200px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+/* Hover Effect */
+.circle-button-file:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Extra Large Screens (1920px and below) */
+@media (max-width: 1920px) {
+  .circle-button-file {
+    --tx: -240px;
+    --ty: 200px;
+  }
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-file {
+    --tx: -205px;
+    --ty: 175px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-file {
+    width: 10vw;
+    height: 10vw;
+    --tx: -173px;
+    --ty: 144px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-file {
+    --tx: -123px;
+    --ty: 138px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-file {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-file {
+    --tx: -12.5vw;
+    --ty: 18.5vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-file {
+    width: 9vw;
+    height: 9vw;
+    --tx: -12.4vw;
+    --ty: 22vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-file {
+    --tx: -8vw;
+    --ty: 14vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-file {
+    --tx: -8vw;
+    --ty: -10vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-file {
+    --tx: -6vw;
+    --ty: -8vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-file {
+    height: 10vh;
+    width: 9vw;
+    --tx: -168px;
+    --ty: 170px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-file {
+    height: 13vh;
+    width: 13vw;
+    --tx: -168px;
+    --ty: 150px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-file {
+    --tx: -8vw;
+    --ty: 14vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-file {
+    --tx: -8vw;
+    --ty: -10vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-file {
+    --tx: -6vw;
+    --ty: -8vh;
+  }
+}
+
+/* Portrait Mode Adjustments */
+@media screen and (orientation: portrait) {
+  .circle-button-file {
+    --tx: -50px;
+    --ty: -150px;
+  }
+  
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-file {
+      height: 10vh !important;
+      width: 7vw !important;
+      --tx: -90px;
+      --ty: 230px;
+    }
+  }
+  
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-file {
+      height: 9vh !important;
+      width: 8vw !important;
+      --tx: -71px !important;
+      --ty: 205px !important;
+    }
+  }
+  
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-file {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+  
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-file {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+  
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-file {
+      height: 9vh !important;
+      width: 10vw !important;
+      --tx: -45px !important;
+      --ty: 145px !important;
+    }
+  }
+}
+
+/* Map Button */
+.circle-button-map {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  max-width: 210px;
+  max-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform-origin: center;
+  --tx: -368px;
+  --ty: 84px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+.circle-button-map:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Extra Large Screens (1920px and below) */
+@media (max-width: 1920px) {
+  .circle-button-map {
+    --tx: -368px;
+    --ty: 84px;
+  }
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-map {
+    --tx: -314px;
+    --ty: 80px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-map {
+    width: 10vw;
+    height: 10vw;
+    max-width: 150px;
+    max-height: 150px;
+    --tx: -263px;
+    --ty: 64px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-map {
+    width: 12vw;
+    height: 12vw;
+    max-width: 120px;
+    max-height: 120px;
+    --tx: -192px;
+    --ty: 64px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-map {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-map {
+    --tx: -18.6vw;
+    --ty: 8.7vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-map {
+    width: 9vw;
+    height: 9vw;
+    max-width: 60px;
+    max-height: 60px;
+    --tx: -18.5vw;
+    --ty: 11vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-map {
+    --tx: -10vw;
+    --ty: -20vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-map {
+    --tx: -8vw;
+    --ty: -25vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-map {
+    --tx: -6vw;
+    --ty: -22vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-map {
+    width: 10vw;
+    height: 10vw;
+    max-width: 11vw;
+    max-height: 12vh;
+    --tx: -263px;
+    --ty: 90px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-map {
+    height: 12vh;
+    width: 12vw;
+    max-width: 13vw;
+    max-height: 13vh;
+    --tx: -244px;
+    --ty: 82px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-map {
+    --tx: -10vw;
+    --ty: -20vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-map {
+    --tx: -8vw;
+    --ty: -25vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-map {
+    --tx: -6vw;
+    --ty: -22vh;
+  }
+}
+
+/* Portrait Mode Adjustments */
+@media screen and (orientation: portrait) {
+  .circle-button-map {
+    --tx: -50px;
+    --ty: -150px;
+  }
+
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-map {
+      height: 11.5vh !important;
+      width: 11vw !important;
+      max-width: 150px;
+      max-height: 150px;
+      --tx: -153px;
+      --ty: 125px;
+    }
+  }
+
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-map {
+      height: 11.5vh !important;
+      width: 11.5vw !important;
+      --tx: -116px !important;
+      --ty: 110px !important;
+    }
+  }
+
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-map {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-map {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-map {
+      height: 12vh !important;
+      width: 12vw !important;
+      --tx: -70.5px !important;
+      --ty: 76px !important;
+    }
+  }
+}
+
+/* Rewards Button */
+.circle-button-rewards {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 22vw;
+  height: 22vw;
+  max-width: 280px;
+  max-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform-origin: center;
+  --tx: -467px;
+  --ty: -93px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+.circle-button-rewards:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Extra Large Screens (1920px and below) */
+@media (max-width: 1920px) {
+  .circle-button-rewards {
+    --tx: -467px;
+    --ty: -93px;
+  }
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-rewards {
+    --tx: -400px;
+    --ty: -74px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-rewards {
+    width: 10vw;
+    height: 10vw;
+    max-width: 200px;
+    max-height: 200px;
+    --tx: -336px;
+    --ty: -66px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-rewards {
+    width: 9vw;
+    height: 9vw;
+    max-width: 155px;
+    max-height: 155px;
+    --tx: -241px;
+    --ty: -47px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-rewards {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-rewards {
+    --tx: -23.8vw;
+    --ty: -7.8vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-rewards {
+    width: 14vw;
+    height: 14vw;
+    max-width: 14.2vw !important;
+    max-height: 14.2vh !important;
+    max-width: 80px;
+    max-height: 80px;
+    --tx: -24.2vw;
+    --ty: -2.1vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-rewards {
+    --tx: -10vw;
+    --ty: -20vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-rewards {
+    --tx: -8vw;
+    --ty: -25vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-rewards {
+    --tx: -6vw;
+    --ty: -22vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-rewards {
+    width: 9vw;
+    height: 9vw;
+    max-width: 14vw;
+    max-height: 14vh;
+    --tx: -328px;
+    --ty: -19px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-rewards {
+    height: 20vh !important;
+    width: 20vw !important;
+    max-width: 18vw !important;
+    max-height: 18vh !important;
+    --tx: -312px;
+    --ty: -35px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-rewards {
+    --tx: -10vw;
+    --ty: -20vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-rewards {
+    --tx: -8vw;
+    --ty: -25vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-rewards {
+    --tx: -6vw;
+    --ty: -22vh;
+  }
+}
+
+/* Portrait Mode Adjustments */
+@media screen and (orientation: portrait) {
+  .circle-button-rewards {
+    --tx: -50px;
+    --ty: -150px;
+  }
+  
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-rewards {
+      height: 11vh !important;
+      width: 11vw !important;
+      --tx: -179px !important;
+      --ty: -11px !important;
+    }
+  }
+  
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-rewards {
+      height: 12vh !important;
+      width: 12vw !important;
+      max-height: 15vh !important; 
+      --tx: -137px !important;
+      --ty: -17px !important;
+    }
+  }
+  
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-rewards {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+  
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-rewards {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+  
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-rewards {
+      height: 12vh !important;
+      width: 12vw !important;
+      --tx: -82px !important;
+      --ty: -10px !important;
+    }
+  }
+}
+
+/* Learn Button */
+.circle-button-learn {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 18vw;
+  height: 18vw;
+  max-width: 240px;
+  max-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform-origin: center;
+  --tx: -542px;
+  --ty: -214px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+.circle-button-learn:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Extra Large Screens (1920px and below) */
+@media (max-width: 1920px) {
+  .circle-button-learn {
+    --tx: -542px;
+    --ty: -214px;
+  }
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-learn {
+    --tx: -473px;
+    --ty: -188px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-learn {
+    width: 10vw;
+    height: 10vw;
+    max-width: 170px;
+    max-height: 170px;
+    --tx: -390px;
+    --ty: -154px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-learn {
+    width: 12vw;
+    height: 12vw;
+    max-width: 130px;
+    max-height: 130px;
+    --tx: -276px;
+    --ty: -127px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-learn {
+    --tx: -130px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-learn {
+    --tx: -28vw;
+    --ty: -19.7vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-learn {
+    width: 9vw;
+    height: 9vw;
+    max-width: 75px;
+    max-height: 75px;
+    --tx: -28vw;
+    --ty: -20.7vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-learn {
+    --tx: -12vw;
+    --ty: -22vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-learn {
+    --tx: -8vw;
+    --ty: -25vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-learn {
+    --tx: -6vw;
+    --ty: -22vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-learn {
+    width: 12vw;
+    height: 12vw;
+    max-width: 12vw;
+    max-height: 12vh;
+    --tx: -383px;
+    --ty: -112px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-learn {
+    height: 20vh;
+    width: 20vw;
+    max-width: 15vw;
+    max-height: 15vh;
+    --tx: -362px;
+    --ty: -122px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-learn {
+    --tx: -12vw;
+    --ty: -22vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-learn {
+    --tx: -8vw;
+    --ty: -25vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-learn {
+    --tx: -6vw;
+    --ty: -22vh;
+  }
+}
+
+/* Portrait Mode Adjustments */
+@media screen and (orientation: portrait) {
+  .circle-button-learn {
+    --tx: -50px;
+    --ty: -150px;
+  }
+  
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-learn {
+      height: 11vh !important;
+      width: 10vw !important;
+      --tx: -215px;
+      --ty: -144px;
+    }
+  }
+  
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-learn {
+      height: 15vh !important;
+      width: 11vw !important;
+      max-height: 15vw !important;
+      --tx: -163px !important;
+      --ty: -125px !important;
+    }
+  }
+  
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-learn {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+  
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-learn {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+  
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-learn {
+      height: 12vh !important;
+      width: 12vw !important;
+      --tx: -99px !important;
+      --ty: -84px !important;
+    }
+  }
+}
+
+/* Login Button */
+.circle-button-login {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 22vw;
+  height: 22vw;
+  max-width: 320px;
+  max-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  overflow: hidden;
+  --tx: -453px;
+  --ty: -370px;
+  transform: translate(var(--tx), var(--ty));
+}
+
+.circle-button-login:hover {
+  transform: translate(var(--tx), var(--ty)) scale(1.1);
+}
+
+/* Large Screens (1440px - 1919px) */
+@media (max-width: 1440px) {
+  .circle-button-login {
+    --tx: -395px;
+    --ty: -325px;
+  }
+}
+
+/* Desktop (1280px - 1439px) */
+@media (max-width: 1280px) {
+  .circle-button-login {
+    width: 10vw;
+    height: 10vw;
+    max-width: 230px;
+    max-height: 230px;
+    --tx: -327px;
+    --ty: -268px;
+  }
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1024px) {
+  .circle-button-login {
+    width: 12vw;
+    height: 12vw;
+    max-width: 170px;
+    max-height: 170px;
+    --tx: -232px;
+    --ty: -225px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (max-width: 900px) {
+  .circle-button-login {
+    --tx: -1300px;
+    --ty: -320px;
+  }
+}
+
+/* Tablet (768px - 899px) */
+@media (max-width: 768px) {
+  .circle-button-login {
+    --tx: -23vw;
+    --ty: -33.7vh;
+  }
+}
+
+/* Mobile (601px - 767px) */
+@media (max-width: 767px) {
+  .circle-button-login {
+    width: 9vw;
+    height: 9vw;
+    max-width: 98px;
+    max-height: 98px;
+    --tx: -23vw;
+    --ty: -36vh;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .circle-button-login {
+    --tx: -12vw;
+    --ty: -22vh;
+  }
+}
+
+/* Small Phones (360px - 479px) */
+@media (max-width: 480px) {
+  .circle-button-login {
+    --tx: -8vw;
+    --ty: -25vh;
+  }
+}
+
+/* Extra Small Devices (320px - 359px) */
+@media (max-width: 360px) {
+  .circle-button-login {
+    --tx: -6vw;
+    --ty: -22vh;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .circle-button-login {
+    width: 12vw;
+    height: 12vw;
+    max-width: 16vw;
+    max-height: 16vh;
+    --tx: -317px;
+    --ty: -212px;
+  }
+}
+
+/* iPad Air & iPad Mini (820px - 1023px) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .circle-button-login {
+    height: 12vh;
+    width: 12vw;
+    max-width: 20vw;
+    max-height: 20vh;
+    --tx: -300px;
+    --ty: -222px;
+  }
+}
+
+/* iPhone 14 Pro Max & iPhone 13 Pro Max (430px - 460px) */
+@media (max-width: 460px) and (min-width: 430px) {
+  .circle-button-login {
+    --tx: -12vw;
+    --ty: -22vh;
+  }
+}
+
+/* iPhone 12/13/14 (390px - 429px) */
+@media (max-width: 429px) and (min-width: 390px) {
+  .circle-button-login {
+    --tx: -8vw;
+    --ty: -25vh;
+  }
+}
+
+/* iPhone SE (320px - 389px) */
+@media (max-width: 389px) and (min-width: 320px) {
+  .circle-button-login {
+    --tx: -6vw;
+    --ty: -22vh;
+  }
+}
+
+/* Portrait Mode Adjustments */
+@media screen and (orientation: portrait) {
+  .circle-button-login {
+    --tx: -50px;
+    --ty: -150px;
+  }
+  
+  /* iPads and Tablets (Portrait) */
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .circle-button-login {
+      height: 12.5vh !important;
+      width: 11.5vw !important;
+      --tx: -166px;
+      --ty: -269px;
+    }
+  }
+  
+  /* Large Phones and Phablets (Portrait) */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .circle-button-login {
+      height: 15vh;
+      width: 15vw;
+      --tx: -125px !important;
+      --ty: -233px !important;
+    }
+  }
+  
+  /* Mobile Phones (Portrait) */
+  @media screen and (max-width: 600px) and (orientation: portrait) {
+    .circle-button-login {
+      --tx: -75px;
+      --ty: -180px;
+    }
+  }
+  
+  /* Small Phones (Portrait) */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .circle-button-login {
+      --tx: -67px;
+      --ty: -210px;
+    }
+  }
+  
+  /* Extra Small Phones (Portrait) */
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    .circle-button-login {
+      height: 13vh !important;
+      width: 13vw !important;
+      --tx: -77px !important;
+      --ty: -168px !important;
+    }
+  }
+}
+
+.circle-button-home img,
+.circle-button-lock img,
+.circle-button-shopping-cart img,
+.circle-button-game img,
+.circle-button-head img,
+.circle-button-dollar img,
+.circle-button-check img,
+.circle-button-help img,
+.circle-button-file img,
+.circle-button-map,
+.circle-button-learn,
+.circle-button-rewards,
+.circle-button-login,
+.circle-button-logout {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+}
+
+.circle-icon {
+  width: 60%;
+  height: auto;
+}
+
+/* Logout Button */
+.circle-button-logout {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 22vw;
+  height: 22vw;
+  max-width: 320px;
+  max-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-453px, -370px);
+  transform-origin: center;
+  overflow: hidden;
+}
+
+.circle-button-logout:hover {
+  transform: translate(-453px, -370px) scale(1.1);
+}
+
+/* Logout Container */
+.logout-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  text-align: center;
+}
+
+/* Tablet (Portrait & Landscape) */
+@media (max-width: 1024px) {
+  .circle-button-logout {
+    width: 20vw;
+    height: 20vw;
+    max-width: 280px;
+    max-height: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-14vw, -22vh);
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+  .circle-button-logout {
+    width: 18vw;
+    height: 18vw;
+    max-width: 120px;
+    max-height: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10vw, -18vh);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .circle-button-logout {
+    width: 20vw;
+    height: 20vw;
+    max-width: 100px;
+    max-height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-8vw, -25vh);
+  }
+
+  .logout-container {
+    width: 90%;
+    max-width: 280px;
+    padding: 15px;
+  }
+}

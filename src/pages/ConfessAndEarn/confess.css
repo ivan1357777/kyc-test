@@ -1,0 +1,223 @@
+/* ConfessAndEarn-page and other styles */
+.ConfessAndEarn-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/b1.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 20px;
+  position: relative;
+  overflow: auto;
+}
+
+.ConfessAndEarn-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  max-width: 90%;
+  width: 70%;
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.close-btn {
+  position: relative;
+  top: 10px;
+  left: 45%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ffeb3b;
+  transform: scale(1.5);
+  background-color: transparent;
+}
+
+/* Media Queries for medium-sized screens (tablets) */
+@media screen and (max-width: 768px) {
+  .ConfessAndEarn-page {
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+
+  .ConfessAndEarn-container {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .close-btn {
+    top: 20px;
+    left: 45%;
+    font-size: 18px;
+  }
+}
+
+/* Media Queries for smaller devices (mobiles) */
+@media (max-width: 480px) {
+  .close-btn {
+    font-size: 16px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .login-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}
+
+/* Input and file upload styling */
+.input-text {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 5rem;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #666;
+}
+
+.upload-file {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 1.5rem;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #666;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  background: #f1f1f1;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.uploaded-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.reward-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.image-modal-content img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.image-modal-content {
+  position: relative;
+}
+
+.image-preview img {
+  max-width: 100%;
+  height: auto;
+  height: 100px;
+}
+
+/* 1) Feed (Thumbnail) Images */
+.confession-image img.uploaded-image,
+.pending-confession-image img {
+  display: block;
+  width: 200px;        /* or whatever thumbnail width you want */
+  height: 200px;       /* same height for a square thumbnail */
+  object-fit: cover;   /* crops the image to fill the 200×200 box */
+  cursor: pointer;     /* matches GoodDeeds 'thumbnail' style */
+}
+
+/* 2) Video Thumbnails (optional, if you want a smaller preview) */
+.confession-video video,
+.pending-confession-video video {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;  /* ensures the video is cropped as well */
+  cursor: pointer;
+}
+
+/* 3) Modal Overlay (full screen background) */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* 4) Modal Content (the image inside the overlay) */
+.image-modal-content img {
+  max-width: 90vw; /* never exceed 90% of viewport width */
+  max-height: 90vh; /* never exceed 90% of viewport height */
+  object-fit: contain; /* keep full image inside the modal */
+  margin: auto;
+  display: block;
+}
+
+/* 5) The container of the feed or pending item (optional) */
+.confession-card, 
+.pending-confession-item {
+  /* If you want a consistent layout or spacing: */
+  margin: 1rem 0;
+}
+
+.centered-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.centered-image img {
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 300px;
+}

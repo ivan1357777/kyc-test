@@ -1,0 +1,140 @@
+
+/* Main container for the presale page */
+.presale-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: url('/b8.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1;
+  position: relative;
+}
+
+/* Style for each section & footer to create a centered card effect */
+.presale-page section,
+.presale-page footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  width: 70%;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+}
+
+/* Headings and text */
+h1, h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+p, li {
+  color: #ddd;
+  font-size: 20px;
+}
+
+/* Countdown timer styling */
+.countdown {
+  margin: 20px 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Progress container & progress bar styling */
+.progress-container {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #444;
+  border-radius: 5px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Table styling for presale phases & investor program */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  color: #fff;
+}
+
+/* Ordered list styling for the "How to Buy" section */
+ol {
+  text-align: left;
+  margin: 20px auto;
+  max-width: 600px;
+  color: #ddd;
+}
+
+/* Unordered list styling for other sections */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+/* Security notice text */
+.security-notice {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ffcc00;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .presale-page section,
+  .presale-page footer {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+.close-btn-presale {
+  position: relative;
+  top: 70px;
+  left: 21%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: transform 0.2s ease, color 0.2s ease;
+  z-index: 1;
+}
+
+.close-btn-presale:hover {
+  color: #ffeb3b;
+  transform: scale(1.5);
+  background-color: transparent;
+}

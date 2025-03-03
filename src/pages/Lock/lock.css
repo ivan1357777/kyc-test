@@ -1,0 +1,63 @@
+/* Lock page background */
+.lock-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/b6.jpg') no-repeat center center; /* Fix background image */
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Lock container */
+.lock-container {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark translucent background */
+  color: white; /* Text color inside the container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  max-width: 90%;
+  width: 70%;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .lock-page {
+      height: calc(var(--vh, 1vh) * 100); /* Fix for mobile view height */
+  }
+
+  .lock-container {
+      width: 80%;
+      padding: 15px;
+  }
+}
+
+/* Buttons styles */
+.lock-button, .access-button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+.lock-button:hover, .access-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error message style */
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+}

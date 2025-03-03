@@ -1,0 +1,156 @@
+.about-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/login-page.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.about-container {
+  background-color: rgba(0,0,0,0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  max-width: 90%;
+  width: 70%;
+  text-align: center;
+  z-index: 2;
+  font-family: 'Gabriola', serif;
+  font-size: x-large;
+  color: #fff;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .about-page {
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+
+  .about-container {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+}
+
+/* Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover:before {
+  opacity: 1;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.close-btn {
+  position: relative;
+  top: 10px;
+  left: 45%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ffeb3b;
+  transform: scale(1.5);
+  background-color: transparent;
+}
+
+/* Media Queries for medium-sized screens (tablets) */
+@media screen and (max-width: 768px) {
+  .ConfessAndEarn-page {
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+
+  .ConfessAndEarn-container {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .close-btn {
+    top: 20px;
+    left: 45%;
+    font-size: 18px;
+  }
+}
+
+/* Media Queries for smaller devices (mobiles) */
+@media (max-width: 480px) {
+  .close-btn {
+    font-size: 16px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .login-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}
