@@ -1,7 +1,7 @@
 {
-  "homepage": "https://ivan1357777.github.io/kyc-demo",
   "name": "kyc-demo",
   "version": "0.1.0",
+  "homepage": "https://ivan1357777.github.io/kyc-demo",
   "private": true,
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
@@ -21,9 +21,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "build:login": "webpack --config webpack.login.js",
     "test": "react-scripts test",
