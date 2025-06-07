@@ -1,0 +1,16 @@
+[package]
+name = "nft_mint"
+version = "1.0.0"
+edition = "2021"
+authors = ["KYC <kyc@kyc.com>"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+anchor-lang = { version = "0.30.0", features = ["init-if-needed"] }
+anchor-spl = { version = "0.30.0" }
+bytemuck = { version = "1.13.1", features = ["derive"] }
+
+[features]
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]

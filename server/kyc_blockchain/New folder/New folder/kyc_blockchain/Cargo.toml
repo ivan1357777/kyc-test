@@ -1,0 +1,22 @@
+[package]
+name = "kyc_blockchain"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = "0.30.0"
+anchor-spl  = "0.30.0"
+solana-program = "1.18.26"
+borsh = "0.10.4"
+borsh-derive = "0.10.4"

@@ -1,0 +1,67 @@
+{
+  "version": "0.1.0",
+  "name": "presale",
+  "instructions": [],
+  "accounts": [
+    {
+      "name": "Presale",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "total_tokens",
+            "type": "u64"
+          },
+          {
+            "name": "tokens_sold",
+            "type": "u64"
+          },
+          {
+            "name": "token_price",
+            "type": "u64"
+          },
+          {
+            "name": "mint",
+            "type": "publicKey"
+          },
+          {
+            "name": "vault",
+            "type": "publicKey"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      },
+      "discriminator": {
+        "type": "u8",
+        "value": [0, 0, 0, 0, 0, 0, 0, 0]
+      }
+    },
+    {
+      "name": "BuyerState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "buyer",
+            "type": "publicKey"
+          },
+          {
+            "name": "tokens_purchased",
+            "type": "u64"
+          }
+        ]
+      },
+      "discriminator": {
+        "type": "u8",
+        "value": [0, 0, 0, 0, 0, 0, 0, 0]
+      }
+    }
+  ],
+  "errors": [],
+  "metadata": {
+    "address": "FtmVMHdEqd3fGCucbc8Q2STerzRo77iobVf5rb4pyukA"
+  }
+}

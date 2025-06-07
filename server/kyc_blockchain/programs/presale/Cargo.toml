@@ -1,0 +1,26 @@
+#Presale
+
+[package]
+name = "presale"
+version = "1.0.0"
+edition = "2021"
+authors = ["KYC <kyc@kyc.com>"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+anchor-lang = { version = "0.30.0", features = ["init-if-needed"] }
+anchor-spl = { version = "0.30.0" }
+bytemuck = { version = "1.13.1", features = ["derive"] }
+bytemuck_derive = "1.9.2"
+borsh = "0.10.3"
+spl-token = { version = "3.5.0", features = ["no-entrypoint"] }
+
+[features]
+default = ["no-idl"]
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
