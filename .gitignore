@@ -10,3 +10,15 @@ server/.env
 
 # Logs
 *.log
+
+# MongoDB data and journals
+data/
+*.rar
+
+# Node modules and Rust build
+node_modules/
+**/target/
+
+# Env and logs
+.env
+*.log
