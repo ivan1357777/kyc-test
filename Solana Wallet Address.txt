@@ -1,0 +1,527 @@
+2bXAHPbeuiiMxcz5FEnEBWFKxfJ6MGNNHXDS8jrDrkFu
+
+3vkW7i4dEzbxaW8BzfbgNjSj4g7ReqVFrsFA7xBAw3Xx
+
+
+
+2pmCQTaATMFD9pUhFv7AT6XDrbXiwrZX7Z9QRta4VVtE
+
+NEW WALLET
+3fBHbMdcBTAHBs9P8XhHRZHeoMsReM4Z4JL572iLFpqq
+
+anchor idl init 3fBHbMdcBTAHBs9P8XhHRZHeoMsReM4Z4JL572iLFpqq --filepath target/idl/kyc_blockchain.json --provider.cluster devnet
+
+
+
+Program ID
+
+GJHF1797JsmCRecBgmrQAhWZaMggjJwf35tzEsjT52fT
+
+
+PHANTOM
+
+3cMLjGaPkaBuJZdQtB8BoFAvNQjWZ2LVePFo9uHvVtw8
+
+TOKEN
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token
+
+Creating token F5QTaj2oiRgRocdo2MjbWKkPAhF8q9j2q91YNMcTv5tb under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+
+Address:  F5QTaj2oiRgRocdo2MjbWKkPAhF8q9j2q91YNMcTv5tb
+Decimals:  9
+
+Signature: jdz49oa3vsRVCSWsku9g7qhsKvf6LhfA3k3VR36pF7GnoL2U2T3zsusjpzDF4ToPZWFQo16ChoKfMTHmpZmSfQJ
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-account F5QTaj2oiRgRocdo2MjbWKkPAhF8q9j2q91YNMcTv5tb
+
+Creating account 2wcoXNHNdeHYx9UVpPkyjD6h1aq6RSUD4oBQeDJpAemY
+
+Signature: GRVQVygAnmDb74VSyGSd7aXsohVbwhEQspiyX6cnarHFyYL4dxfTT5avL2rc8CW1ExrZD8nw47dU8KYBpFhAhE9
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token mint F5QTaj2oiRgRocdo2MjbWKkPAhF8q9j2q91YNMcTv5tb 1000000
+Minting 1000000 tokens
+  Token: F5QTaj2oiRgRocdo2MjbWKkPAhF8q9j2q91YNMcTv5tb
+  Recipient: 2wcoXNHNdeHYx9UVpPkyjD6h1aq6RSUD4oBQeDJpAemY
+
+Signature: 2ERNASjmrFJLAkQJHfhHwug4PBvrRzGqNGSLqzyoGdie4uD8kQc7amW1Lbn2ZPeoh1EwLVxKqzEx3uHbjMqewmqs
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ anchor deploy
+Deploying cluster: https://api.devnet.solana.com
+Upgrade authority: /home/ivan1357/.config/solana/kyc-wallet.json
+Deploying program "kyc_blockchain"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/kyc_blockchain.so...
+Program Id: D1McofQMxoRZmZ1YCDRjVj5dcDZPrTRKqjSWz28EkAt5                                                                                                                                                  
+
+Deploying program "presale"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/presale.so...
+Program Id: 3h3rGdXEe1LaaFMiy678N2pnVPrVD7znVvZZT9oGjVqZ
+
+Deploy success
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain
+
+____________________________________________________________________________________________________________________________________________
+
+NEW
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ anchor deploy
+Deploying cluster: https://api.devnet.solana.com
+Upgrade authority: /home/ivan1357/.config/solana/kyc-wallet.json
+Deploying program "kyc_blockchain"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/kyc_blockchain.so...
+Program Id: HHhirpZxvT4qrfxSDFEkqRKGkRF2HURg5orxZDkXji8L                                                                                                                         
+
+Deploying program "nft_mint"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/nft_mint.so...
+Program Id: GShik2RHbJnFhNvLD8n9vh7eDhQVY28NZ7WhdwjGsdr2                                                                                                                         
+
+Deploying program "presale"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/presale.so...
+Program Id: 5tWv1KrHki91NizrnCtyGwWjt1GmAxfo9K6jCyvF6QR                                                                                                                          
+
+Deploy success
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+_____________________________________________________________________________________
+
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ anchor build
+Updating program ids...
+Found incorrect program id declaration in "/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/programs/kyc_blockchain/src/lib.rs"
+Updated to HHhirpZxvT4qrfxSDFEkqRKGkRF2HURg5orxZDkXji8L
+
+Found incorrect program id declaration in Anchor.toml for the program `kyc_blockchain`
+Updated to HHhirpZxvT4qrfxSDFEkqRKGkRF2HURg5orxZDkXji8L
+
+Found incorrect program id declaration in "/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/programs/nft_mint/src/lib.rs"
+Updated to GShik2RHbJnFhNvLD8n9vh7eDhQVY28NZ7WhdwjGsdr2
+
+Found incorrect program id declaration in Anchor.toml for the program `nft_mint`
+Updated to GShik2RHbJnFhNvLD8n9vh7eDhQVY28NZ7WhdwjGsdr2
+
+Found incorrect program id declaration in "/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/programs/presale/src/lib.rs"
+Updated to 5tWv1KrHki91NizrnCtyGwWjt1GmAxfo9K6jCyvF6QR
+
+Found incorrect program id declaration in Anchor.toml for the program `presale`
+Updated to 5tWv1KrHki91NizrnCtyGwWjt1GmAxfo9K6jCyvF6QR
+
+All program id declarations are synced.
+Please rebuild the program to update the generated artifacts.
+______________________________________________________________________________________________________________________________________________________________________
+
+NEW MINT
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token authorize F5QTaj2oiRgRocdo2MjbWKkPAhF8q9j2q91YNMcTv5tb mint 4tQ6gWSoV91sg3Z788JcUkNMxeLMDjiNCk4XnAcqsWHK --owner /home/ivan1357/.config/solana/kyc-wallet.json
+Updating F5QTaj2oiRgRocdo2MjbWKkPAhF8q9j2q91YNMcTv5tb
+  Current mint: 3fBHbMdcBTAHBs9P8XhHRZHeoMsReM4Z4JL572iLFpqq
+  New mint: 4tQ6gWSoV91sg3Z788JcUkNMxeLMDjiNCk4XnAcqsWHK
+                                                                                                                                                                                 
+Signature: 3hMZr13NEcLRmZ3n3MaWca6ejE2xZaZuvY7wJzei1VcQiptGinMNKfy6QBNrNE3B3kYvkBYu6NWoNKjCPc63v6Tk
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ 
+
+___________________________________________________________________________________________________________________________________________________________________________
+
+NFT MINT
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token --decimals 0
+Creating token Bw1D9BMdTS3NAu4ZC1caanb68eBZV4E3mcXDBYjGFWJF under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+
+Address:  Bw1D9BMdTS3NAu4ZC1caanb68eBZV4E3mcXDBYjGFWJF
+Decimals:  0
+
+Signature: 4zjUoDFvW1NTxFa2C473TKZDQtUDrntppzAt4evVEEGzYGWUYUCFkTHyR65GyRSq5t3A9qNSpa7gC3bGdAEg4EJH
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-account Bw1D9BMdTS3NAu4ZC1caanb68eBZV4E3mcXDBYjGFWJF
+Creating account DHiyGAykd3JTqX7rNZCf9zuDDqN3xA6DBeVw6N5ESdqi
+                                                                                                                                                                                 
+Signature: 3RbNEXYRyJyFepBR333thvqS7xwTbXMThWJUuRu2Bcy5geX3mQxmsR1UJj6ZKvPp6t43bugzKmgf87feXJZpniTg
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+______________________________________________________________________
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token --decimals 0
+Creating token 7nP3nigM194RNGft7SpVFyQw85U8PxXqQEp79rRfuEfB under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+                                                                                                                                                                                 
+Address:  7nP3nigM194RNGft7SpVFyQw85U8PxXqQEp79rRfuEfB
+Decimals:  0
+
+Signature: ZfUBg3YmYV5wnYv4WQqRZByLD5yAxA9b8srtQbrY4ZoDSVyYEDRiauD94QuN1bovU3kaczWaxFaGdAahe8EoqRx
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-account 7nP3nigM194RNGft7SpVFyQw85U8PxXqQEp79rRfuEfB
+Creating account 87czYy8qAZrUBB2XxRVbiwZZTW1nEmgJGurT5p2yjWnw
+
+Signature: 5zR3xLE3UssEbjKEoTyDaC7wsXahETvx21DAtLfAnMiR52QSQH7ZLkagyUYz65F1Ex9PAGe7LvxwokqSYYNPHJFv
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+______________________
+
+NEW MINT
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token --decimals 0
+Creating token 9fyU75rgYkqjWFzF2ffeNi4v4d7PMW3KJRLBEzFAoxML under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+
+Address:  9fyU75rgYkqjWFzF2ffeNi4v4d7PMW3KJRLBEzFAoxML
+Decimals:  0
+
+Signature: PKv4smpfh6ZM6GhQzzmHba2ifGWoLrK4XrwoTDx3XnVCMZufAZjauDfHVxa4hQcuPnQDDiTDJtGkNvhSuPEYCaW
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token authorize 9fyU75rgYkqjWFzF2ffeNi4v4d7PMW3KJRLBEzFAoxML mint 4tQ6gWSoV91sg3Z788JcUkNMxeLMDjiNCk4XnAcqsWHK
+Updating 9fyU75rgYkqjWFzF2ffeNi4v4d7PMW3KJRLBEzFAoxML
+  Current mint: 3fBHbMdcBTAHBs9P8XhHRZHeoMsReM4Z4JL572iLFpqq
+  New mint: 4tQ6gWSoV91sg3Z788JcUkNMxeLMDjiNCk4XnAcqsWHK
+                                                                                                                                                                                 
+Signature: 2So8TX6Ym73yZnGswPCMABJ6WfpkyzbxtPM4oKaBHk6YpzfGPqtRv9HBLKUgX1gL8MisUqcqaSKgb2PBpFT6XMm2
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ anchor clean
+Updating program ids...
+Found incorrect program id declaration in "/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/programs/kyc_blockchain/src/lib.rs"
+Updated to 8CFsXP4LJyoc5YFg83hydtMuyE2CV46YjYp2rcFNn4fi
+
+Found incorrect program id declaration in Anchor.toml for the program `kyc_blockchain`
+Updated to 8CFsXP4LJyoc5YFg83hydtMuyE2CV46YjYp2rcFNn4fi
+
+Found incorrect program id declaration in "/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/programs/nft_mint/src/lib.rs"
+Updated to 6KBoyTjL559hUVs8FQLBrHD8afGXdrbUnPePcLNuY6d3
+
+Found incorrect program id declaration in Anchor.toml for the program `nft_mint`
+Updated to 6KBoyTjL559hUVs8FQLBrHD8afGXdrbUnPePcLNuY6d3
+
+Found incorrect program id declaration in "/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/programs/presale/src/lib.rs"
+Updated to 5k6J8YACYvJ6kvQzjQMddKboqEY2MoYBRhpBcTiPwykr
+
+Found incorrect program id declaration in Anchor.toml for the program `presale`
+Updated to 5k6J8YACYvJ6kvQzjQMddKboqEY2MoYBRhpBcTiPwykr
+
+All program id declarations are synced.
+Please rebuild the program to update the generated artifacts.
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ 
+
+-------------------------------
+
+NEW MINT
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token --decimals 0
+Creating token 7zP6eXYU8QpvwZXXLnD285BnwwfhpQyjHatDw9oZGuqV under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+                                                                                                                                                                                 
+Address:  7zP6eXYU8QpvwZXXLnD285BnwwfhpQyjHatDw9oZGuqV
+Decimals:  0
+
+Signature: 3vyyZQVDUjznFJJyNqbZHByd4E1dcfw4mJJvMhdqw9xfxrEn42kgAdEBu56Ce6xGnZZVJdi6L9VLudKFUHPp64tG
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+_____________________________________________________________________________________________________________________________
+
+https://explorer.solana.com/address/F5QTaj2oiRgRocdo2MjbWKkPAhF8q9j2q91YNMcTv5tb?cluster=devnet
+
+________________________________________________________________________________________________________________________________________________
+
+W SMART CONTRACT
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ anchor deploy
+Deploying cluster: https://api.devnet.solana.com
+Upgrade authority: /home/ivan1357/.config/solana/kyc-wallet.json
+Deploying program "kyc_blockchain"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/kyc_blockchain.so...
+Program Id: 8CFsXP4LJyoc5YFg83hydtMuyE2CV46YjYp2rcFNn4fi                                                                                                                         
+
+Deploying program "nft_mint"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/nft_mint.so...
+Program Id: 6KBoyTjL559hUVs8FQLBrHD8afGXdrbUnPePcLNuY6d3                                                                                                                         
+
+Deploying program "presale"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/presale.so...
+Program Id: 5k6J8YACYvJ6kvQzjQMddKboqEY2MoYBRhpBcTiPwykr
+
+Deploying program "smart_contract"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/smart_contract.so...
+Program Id: Grsci1e9fpXueGWhzHSHkoLyHX2988adpMrufJQiXquh                                                                                                                         
+
+Deploy success
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+____________________________________________________________________________________________________________________________________________________________________
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ anchor clean
+Updating program ids...
+Found incorrect program id declaration in "/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/programs/kyc_blockchain/src/lib.rs"
+Updated to 7LVdmKq8dbFDRbDSzipmcHDPDyfeBYWXgkRiGU14F1LS
+
+Found incorrect program id declaration in Anchor.toml for the program `kyc_blockchain`
+Updated to 7LVdmKq8dbFDRbDSzipmcHDPDyfeBYWXgkRiGU14F1LS
+
+Found incorrect program id declaration in "/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/programs/nft_mint/src/lib.rs"
+Updated to 638LmyVM1ftUaDWXtWz14xKAFuBuw6EJUWTwWGKBvRjm
+
+Found incorrect program id declaration in Anchor.toml for the program `nft_mint`
+Updated to 638LmyVM1ftUaDWXtWz14xKAFuBuw6EJUWTwWGKBvRjm
+
+Found incorrect program id declaration in "/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/programs/presale/src/lib.rs"
+Updated to GCwQbV1zy5ySLTSWeighrijGTXJqvRgmu6xkUSt7nTXK
+
+Found incorrect program id declaration in Anchor.toml for the program `presale`
+Updated to GCwQbV1zy5ySLTSWeighrijGTXJqvRgmu6xkUSt7nTXK
+
+Found incorrect program id declaration in "/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/programs/smart_contract/src/lib.rs"
+Updated to 673wrbdb5yPfA7tChHusjVYm6aGhah2D1UdzdAjgjjCg
+
+Found incorrect program id declaration in Anchor.toml for the program `smart_contract`
+Updated to 673wrbdb5yPfA7tChHusjVYm6aGhah2D1UdzdAjgjjCg
+
+All program id declarations are synced.
+Please rebuild the program to update the generated artifacts.
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ 
+
+-----
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ anchor deploy
+Deploying cluster: https://api.devnet.solana.com
+Upgrade authority: /home/ivan1357/.config/solana/kyc-wallet.json
+Deploying program "kyc_blockchain"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/kyc_blockchain.so...
+Program Id: 7LVdmKq8dbFDRbDSzipmcHDPDyfeBYWXgkRiGU14F1LS
+
+Deploying program "nft_mint"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/nft_mint.so...
+Program Id: 638LmyVM1ftUaDWXtWz14xKAFuBuw6EJUWTwWGKBvRjm                                                                                                                         
+
+Deploying program "presale"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/presale.so...
+Program Id: GCwQbV1zy5ySLTSWeighrijGTXJqvRgmu6xkUSt7nTXK                                                                                                                         
+
+Deploying program "smart_contract"...
+Program path: /mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/target/deploy/smart_contract.so...
+Program Id: 673wrbdb5yPfA7tChHusjVYm6aGhah2D1UdzdAjgjjCg                                                                                                                         
+
+Deploy success
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+------
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token --decimals 0
+Creating token 2PBZJNxiyNyZhHaBhCQbqtGMTCFHRP3BTmQSMsERoyv7 under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+                                                                                                                                                                                 
+Address:  2PBZJNxiyNyZhHaBhCQbqtGMTCFHRP3BTmQSMsERoyv7
+Decimals:  0
+
+Signature: DXABqY7X9C5DAhzsgNVuUXFdWLPfetZh4Aizsg9SwKAQzM36yj4xjv6jAHLLY8GZdyv1Wimp8y5JN239Go3VTwh
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token --decimals 0
+Creating token eggy1rJs67i4xyPTAzQ491uZUwr6MSdJsqCZLyrcxgm under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+
+Address:  eggy1rJs67i4xyPTAzQ491uZUwr6MSdJsqCZLyrcxgm
+Decimals:  0
+
+Signature: LvueDC1Nbn2fALo3a8rSXQCib1PdJq2RZAXMi3XwUqsqSNQJWbUPygADyhaPD1gb2vFfp4Y3Ddwe8yEpbpN6wzG
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+---------
+
+NEW MINT
+
+urn_data: None, inner_instructions: None }) }) })
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain/programs/nft_mint$ spl-token create-token --decimals 0
+Creating token ETQrDqGb6jn6aJcW7XbcEWhB74tn2rYttR6kE5FUPP4G under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+                                                                                                                                                                                 
+Address:  ETQrDqGb6jn6aJcW7XbcEWhB74tn2rYttR6kE5FUPP4G
+Decimals:  0
+
+Signature: weennTwZpUwVnyfkBBXPE9zHNqNo8Zotvyp6ptgN3gQbiJskFYrZNk4SRDgubkhDjRJ7jAp2CX3vyTXuY99n7ua
+
+______________________________________________________________________________________________________________________________________________________
+
+F:\Website\KYC\kyc-project\kyc>node compute_pda.js
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+Expected mint authority PDA: hzSu6GCpsnvJ5fGsHgANLTBXa518KTf4TrBvkp6M2Vw
+Bump: 255
+
+F:\Website\KYC\kyc-project\kyc>
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token --decimals 0
+Creating token FuPScRwdgdRYfcyctCsiUeChmd9EuvJemMZXGacDBEQn under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+                                                                                                                                                                                 
+Address:  FuPScRwdgdRYfcyctCsiUeChmd9EuvJemMZXGacDBEQn
+Decimals:  0
+
+Signature: 4BdnsatYY1wbeGEnm1KsuiHT3r81sNMEEraaQDzU7zfbZsACBKF6LFpYaiwpFkMzfxadisu5C8TzbJepbKAN3mPZ
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+--
+
+F:\Website\KYC\kyc-project\kyc>node compute_pda.js
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+Expected mint authority PDA: 2QbgTzNnDGPHExLrLQxc1SfcZ8rFTTfQdqAGwBG64QPF
+Bump: 255
+
+F:\Website\KYC\kyc-project\kyc>
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token authorize FuPScRwdgdRYfcyctCsiUeChmd9EuvJemMZXGacDBEQn mint 2QbgTzNnDGPHExLrLQxc1SfcZ8rFTTfQdqAGwBG64QPF
+Updating FuPScRwdgdRYfcyctCsiUeChmd9EuvJemMZXGacDBEQn
+  Current mint: 3fBHbMdcBTAHBs9P8XhHRZHeoMsReM4Z4JL572iLFpqq
+  New mint: 2QbgTzNnDGPHExLrLQxc1SfcZ8rFTTfQdqAGwBG64QPF
+                                                                                                                                                                                 
+Signature: 2qdPDVLvFCtnuBczt7op139VHbBG57r67tsjZxuSDMVk7LWaD2R5KSfmJp6qvFkpduj1XSu7reXEwGuSq9uiFrbp
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token --decimals 9
+Creating token Br3X9FoicD1EWJoxg3vJQwGo6oy9RbMFU6JZDCQRJxK3 under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+                                                                                                                                                                                 
+Address:  Br3X9FoicD1EWJoxg3vJQwGo6oy9RbMFU6JZDCQRJxK3
+Decimals:  9
+
+Signature: g2iUbkUmAmP48zPFpJ413wu9TFpb3bAge9FyQUj6i9aaYAHy7DnETRHdbxHcdhxwr33DaSy6gMntJ47qVFUcmud
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-account Br3X9FoicD1EWJoxg3vJQwGo6oy9RbMFU6JZDCQRJxK3
+Creating account FDCgQL7gG1cyVuj8KYrcq2jnKKHmqBWRkNv5LYqdtdGw
+
+Signature: VikUg41jwJ9j6qsG2VV35o5jQWZvmVRxsxbzsM3Z4ikgkHCGkZD6JEdkLJTrynC2UTC6pEtbuiFfFQQPPDyhNi9
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token account-info Br3X9FoicD1EWJoxg3vJQwGo6oy9RbMFU6JZDCQRJxK3
+
+SPL Token Account
+  Address: FDCgQL7gG1cyVuj8KYrcq2jnKKHmqBWRkNv5LYqdtdGw
+  Program: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+  Balance: 18446744073.709551615
+  Decimals: 9
+  Mint: Br3X9FoicD1EWJoxg3vJQwGo6oy9RbMFU6JZDCQRJxK3
+  Owner: 3fBHbMdcBTAHBs9P8XhHRZHeoMsReM4Z4JL572iLFpqq
+  State: Initialized
+  Delegation: (not set)
+  Close authority: (not set)
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ 
+
+_____________________________________________________________________________________________________________________________________________________________
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ solana-keygen new --outfile mint-keypair.json
+Generating a new keypair
+
+For added security, enter a BIP39 passphrase
+
+NOTE! This passphrase improves security of the recovery seed phrase NOT the
+keypair file itself, which is stored as insecure plain text
+
+BIP39 Passphrase (empty for none):
+
+Wrote new keypair to mint-keypair.json
+=============================================================================
+pubkey: 9KFtts6vVMUQcWA5yh5MLLyCeJMNuSbGzT4YZqNE3rGj
+=============================================================================
+Save this seed phrase and your BIP39 passphrase to recover your new keypair:
+kite culture donor senior stadium dilemma stand buyer essay area stool cotton
+=============================================================================
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ ^C
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token mint-keypair.json --url devnet
+Creating token 9KFtts6vVMUQcWA5yh5MLLyCeJMNuSbGzT4YZqNE3rGj under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+                                                                                                                                                                                 
+Address:  9KFtts6vVMUQcWA5yh5MLLyCeJMNuSbGzT4YZqNE3rGj
+Decimals:  9
+
+Signature: 4L1qpnPzAsh4dG3Dq3mGejRADWFY2Xbqztu1zvtZNWehf9WPBoabtBMTYywnVEAgZC89jEQmANB2t6CUYxfnSKu2
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ solana config get
+Config File: /home/ivan1357/.config/solana/cli/config.yml
+RPC URL: https://api.devnet.solana.com/
+WebSocket URL: wss://api.devnet.solana.com/ (computed)
+Keypair Path: /home/ivan1357/.config/solana/kyc-wallet.json
+Commitment: confirmed
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token --url devnet
+Creating token 5ZTjENH5xEHyNryT9PU6Bb74cipNEjTFFQqtfVjDkEMG under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+
+Address:  5ZTjENH5xEHyNryT9PU6Bb74cipNEjTFFQqtfVjDkEMG
+Decimals:  9
+
+Signature: 2a9yh1jfUicaH84BU9nC12w7ZnJCD3iv3yoc7iDEYRHsbJpAizNUpsRJEP4UjVMYQA6ogMmvKBebMxuoCf3rrGqG
+
+--
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-account 5ZTjENH5xEHyNryT9PU6Bb74cipNEjTFFQqtfVjDkEMG --url devnet
+Creating account DBRYFQ5zucGpePbS7C9AXrebDqRBhNJHmQRBZJckp65S
+                                                                                                                                                                                 
+Signature: 36VddAqUfz2PVq9Y1FN6TBbKAB8BByjysLJWXLyLxLtjBJPn7g1n75tqmh9LnbAAfUB8LZye31PffHkTMzqoLXk2
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+_________________________________________________________________________________________________________________________________________________________________
+
+2nd Choice
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-token --url devnet
+Creating token 6fc9WEbgQtDs6p7mYZs6dbA4LRHxcvWsVEZUPMQ2PLtH under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+
+                                                                                                                                                                                 
+Address:  6fc9WEbgQtDs6p7mYZs6dbA4LRHxcvWsVEZUPMQ2PLtH
+Decimals:  9
+
+Signature: 4tQpBgUjRgktqEGH2zxgjmQFRY9mzmqBv83t8KuempJ4J9N5MXUqaTUDJHyrFTX5AnjHufzvKmdG5NhXJeB4NAB9
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$
+
+==
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$ spl-token create-account 6fc9WEbgQtDs6p7mYZs6dbA4LRHxcvWsVEZUPMQ2PLtH --url devnet
+Creating account DmHA5QLbXPfK7ABK1ZkDpLkpyAScBqpnuym7dWiSR1Uy
+                                                                                                                                                                                 
+Signature: 4tMAVGHdvST8bfQndp9RvtR8ZL6SnSWGE4L2F1hnSDw14GwYhtbS3BdEdCrNe99A5JqqqSg64o7cfuy9A5XmXate
+
+ivan1357@pLuserh:/mnt/f/Website/KYC/kyc-project/kyc/kyc_blockchain$

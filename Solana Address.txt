@@ -1,0 +1,5 @@
+Solana Address
+
+2pmCQTaATMFD9pUhFv7AT6XDrbXiwrZX7Z9QRta4VVtE
+
+solana airdrop 2 2pmCQTaATMFD9pUhFv7AT6XDrbXiwrZX7Z9QRta4VVtE --url https://api.devnet.solana.com
